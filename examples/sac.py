@@ -12,8 +12,8 @@ from rlkit.torch.torch_rl_algorithm import TorchBatchRLAlgorithm
 
 
 def experiment(variant):
-    expl_env = NormalizedBoxEnv(HalfCheetahEnv())
-    eval_env = NormalizedBoxEnv(HalfCheetahEnv())
+    expl_env = NormalizedBoxEnv(HalfCheetahEnv()) ## exploration normalizing the state, action and reward spaces
+    eval_env = NormalizedBoxEnv(HalfCheetahEnv()) ## evaluation 
     obs_dim = expl_env.observation_space.low.size
     action_dim = eval_env.action_space.low.size
 
